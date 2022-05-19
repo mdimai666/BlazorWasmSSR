@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32505.426
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSSR1.Server", "BlazorSSR1\Server\BlazorSSR1.Server.csproj", "{F39D3C4A-7843-4B8C-BB64-17E99531E9BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSSR1.Server", "BlazorSSR1\Server\BlazorSSR1.Server.csproj", "{F39D3C4A-7843-4B8C-BB64-17E99531E9BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSSR1.Client", "BlazorSSR1\Client\BlazorSSR1.Client.csproj", "{DAA169EF-4CDE-4D4B-819D-F6C43B2691C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSSR1.Client", "BlazorSSR1\Client\BlazorSSR1.Client.csproj", "{DAA169EF-4CDE-4D4B-819D-F6C43B2691C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSSR1.Shared", "BlazorSSR1\Shared\BlazorSSR1.Shared.csproj", "{B74EC394-9087-43D5-A67C-B8FB61470168}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSSR1.Shared", "BlazorSSR1\Shared\BlazorSSR1.Shared.csproj", "{B74EC394-9087-43D5-A67C-B8FB61470168}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{25818D17-7971-4EC0-9BCF-AE762FA1CF2E}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		..\..\..\..\..\..\Downloads\Screenshot.jpeg = ..\..\..\..\..\..\Downloads\Screenshot.jpeg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
