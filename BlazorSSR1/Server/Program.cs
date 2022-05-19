@@ -1,6 +1,9 @@
 using BlazorSSR1.Server.Data;
 using BlazorSSR1.Server.Models;
+using BlazorSSR1.Server.Services;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +23,18 @@ builder.Services.AddIdentityServer()
 
 builder.Services.AddAuthentication()
     .AddIdentityServerJwt();
+
+
+// Заглушка для SSR
+//builder.Services.AddOidcAuthentication<>();
+//builder.Services.AddApiAuthorization();
+builder.Services.AddRemoteAuthentication<RemoteAuthenticationState, RemoteUserAccount, OidcProviderOptions>();
+builder.Services.AddScoped<AuthenticationStateProvider, RemoteAuthenticationService>()
+    .AddScoped<SignOutSessionStateManager>()
+    .AddTransient<IAccessTokenProvider, AccessTokenProvider>()
+    .AddTransient<Microsoft.JSInterop.IJSRuntime, JSRuntime>();
+//end Заглушка для SSR
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -53,6 +68,8 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();
-app.MapFallbackToFile("index.html");
+//app.MapFallbackToFile("index.html");
+app.MapFallbackToPage("/_Host");
+
 
 app.Run();
